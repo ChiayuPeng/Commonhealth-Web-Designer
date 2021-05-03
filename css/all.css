@@ -346,12 +346,12 @@ table {
 }
 
 .slick-prev::before {
-  content: url(/image/right_arrow.svg);
+  content: url(../image/right_arrow.svg);
   display: block;
 }
 
 [dir="rtl"] .slick-prev::before {
-  content: url(/image/right_arrow.svg);
+  content: url(../image/right_arrow.svg);
   display: block;
 }
 
@@ -366,12 +366,12 @@ table {
 }
 
 .slick-next::before {
-  content: url(/image/left_arrow.svg);
+  content: url(../image/left_arrow.svg);
   display: block;
 }
 
 [dir="rtl"] .slick-next::before {
-  content: url(/image/left_arrow.svg);
+  content: url(../image/left_arrow.svg);
   display: block;
 }
 

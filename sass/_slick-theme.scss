@@ -117,11 +117,11 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     &::before {
-        content: url(/image/right_arrow.svg);
+        content: url(../image/right_arrow.svg);
         display: block;
 
         [dir="rtl"] & {
-            content: url(/image/right_arrow.svg);
+            content: url(../image/right_arrow.svg);
             display: block;
         }
     }
@@ -137,11 +137,11 @@ $slick-opacity-not-active: 0.25 !default;
     }
 
     &::before {
-        content: url(/image/left_arrow.svg);
+        content: url(../image/left_arrow.svg);
         display: block;
 
         [dir="rtl"] & {
-            content: url(/image/left_arrow.svg);
+            content: url(../image/left_arrow.svg);
             display: block;
         }
     }
