@@ -122,7 +122,7 @@ h3 {
 
 //header
 header {
-    background-image: url(/image/header.jpg);
+    background-image: url(../image/header.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -140,19 +140,18 @@ header {
 
     @include desktop-top {
         padding: 5.5%;
-        background-image: url(/image/header.jpg);
     }
 
     @include pad {
         height: calc(100vh - 70px);
         padding: 3.5% 2.5%;
-        background-image: url(/image/header_ipad.jpg);
+        background-image: url(../image/header_ipad.jpg);
     }
 
     @include iphone {
         margin-top: 60px;
         height: calc(100vh - 60px);
-        background-image: url(/image/header_mobile.jpg);
+        background-image: url(../image/header_mobile.jpg);
     }
 
     .container>div {
@@ -357,7 +356,7 @@ header {
 
 //team_members
 .team_members {
-    background: url(/image/team_bg.png);
+    background: url(../image/team_bg.png);
     background-repeat: repeat-x;
     background-position: bottom;
     background-color: $main_color;
