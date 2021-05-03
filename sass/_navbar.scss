@@ -1,0 +1,210 @@
+$main_color:#003A44;
+$sub_color:#00A8BA;
+$hover-color:#CD3072;
+
+@mixin desktop {
+    @media (max-width:1280px) {
+        @content
+    }
+}
+
+@mixin desktop-top {
+    @media (max-width:1024px) {
+        @content
+    }
+}
+
+@mixin desktop-below {
+    @media (max-width:992px) {
+        @content
+    }
+}
+
+@mixin pad {
+    @media (max-width:768px) {
+        @content
+    }
+}
+
+@mixin iphone {
+    @media (max-width:568px) {
+        @content
+    }
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+    @include pad {
+        padding: 15px 0;
+    }
+
+    @include iphone {
+        padding: 10px 0;
+        height: 60px;
+    }
+
+    .d-flex {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        .logo {
+            height: 35px;
+        }
+    }
+
+    ul {
+        li {
+            a {
+                padding: 23px 20px;
+                display: inline-table;
+
+                &:hover {
+                    color: $hover-color;
+                    padding: 23px 20px 18px;
+                    border-bottom: 5px solid $hover-color;
+                }
+
+                @include iphone {
+                    font-size: 20px;
+
+                }
+            }
+        }
+    }
+
+    .social_group {
+        justify-content: center;
+
+        @include pad {
+            margin-top: 15px;
+        }
+    }
+
+    .social {
+        font-size: 40px;
+
+        a {
+            padding: 0 20px;
+
+            &:hover {
+                border-bottom: 0;
+                padding: 0 20px;
+            }
+
+            @include iphone {
+                font-size: 40px;
+                color: #fff;
+            }
+        }
+    }
+
+    .button-toggle {
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        z-index: 10000;
+        cursor: pointer;
+
+        @include pad {
+            display: block;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            background-color: $main_color;
+
+            &::after,
+            &::before {
+                transition: all .5s;
+                position: absolute;
+                content: '';
+                display: block;
+                width: 100%;
+                top: 50%;
+                height: 2px;
+                background-color: $main_color;
+            }
+
+            &::before {
+                top: -10px
+            }
+
+            &::after {
+                bottom: -10px;
+                top: auto
+            }
+        }
+
+        &.active {
+
+            span {
+                background-color: transparent;
+
+                &::after,
+                &::before {
+                    top: 0;
+                }
+
+                &::before {
+                    transform: rotate(45deg);
+
+                    @include pad {
+                        background-color: #fff;
+                    }
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+
+                    @include pad {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    @include pad {
+        .dropdown {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 0px;
+            background-color: #fff;
+            transition: all 0.5s;
+            overflow: hidden;
+            z-index: 120;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+
+            &.opening {
+                height: 100vh;
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+                background-color: $sub_color;
+            }
+
+            li {
+                width: 100vw;
+                text-align: center;
+            }
+        }
+    }
+}
