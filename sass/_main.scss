@@ -583,7 +583,7 @@ header {
             background-color: $sub_color;
             transform: translateX(-50%);
 
-            @include pad {
+            @include desktop-below {
                 width: 5px;
                 height: 5px;
                 left: -23px;
@@ -621,7 +621,7 @@ header {
                 bottom: inherit;
                 top: -36px;
 
-                @include pad {
+                @include desktop-below {
                     left: -23px;
                     top: 50%;
                 }
