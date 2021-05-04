@@ -1097,7 +1097,7 @@ header .scroll i {
           transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .timeline li::after {
     width: 5px;
     height: 5px;
@@ -1142,7 +1142,7 @@ header .scroll i {
   top: -36px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .timeline li:nth-child(even)::after {
     left: -23px;
     top: 50%;
